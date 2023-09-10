@@ -1,0 +1,19 @@
+{
+	"dev": {
+		"scoop_executors" 			: "1",
+		"last_n_days"				: "20",
+		"conn_string"				: "jdbc:postgresql://john.db.elephantsql.com/",
+		"table" 					: "test",
+		"Ec2SubnetId"				: "subnet-6c954d0b",
+		"Ec2KeyName"				: "ganesh.pem",
+		"instance_profile" 			: "AmazonEMR-InstanceProfile-xxxxxx",
+		"s3_code_folder" 			: "emr-code-bucket-stage",
+		"s3_emr_logs_folder"		: "s3://aws-logs-491516382502-us-east-1/elasticmapreduce",
+		"sns_topic_arn"				: "arn:aws:sns:us-east-1:491516382502:test"
+	},
+	},
+	"pre-prod": {
+	},
+	"prod": {
+	}
+}
