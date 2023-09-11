@@ -10,7 +10,7 @@ file_path=${9}
 
 start_date=$(date -d "$(date) -$last_n_days days" +%Y-%m-%d)
 
-sqoop import --connect ${db_conn_string}  --username ${db_user} --password ${db_pwd} --table ${source_table}  --where "TRADE_TIME > '${start_date}'"  --hive-import  --hive-table ${hive_temp_table_name} --m ${scoop_executors}
+sqoop import --connect ${db_conn_string}  --username ${db_user} --password ${db_pwd} --table ${source_table}  --where 1=1  --hive-import  --hive-table ${hive_temp_table_name} --m ${scoop_executors}
 
 if [ $? -eq 0 ]; then
 	hive -e "INSERT INTO status VALUES('$job_name','$d','true')"
